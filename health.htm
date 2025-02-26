@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skrining Kesehatan</title>
+
+    <!-- Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://gumelis.id/assets/logo/icon-gumelis.ico" />
+
+            <!-- Aos Animation Css -->
+        <link rel="stylesheet" href="https://gumelis.id/assets/vendor/aos/dist/aos.css" />
+
+        <!-- Flatpickr css -->
+        <link rel="stylesheet" href="https://gumelis.id/assets/vendor/flatpickr/dist/flatpickr.css" />
+    
+    <!-- Library / Plugin Css Build -->
+    <link rel="stylesheet" href="https://gumelis.id/assets/css/core/libs.css" />
+
+    <!-- Hope Ui Design System Css -->
+    <link rel="stylesheet" href="https://gumelis.id/assets/css/hope-ui.css?v=2.0.0" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="https://gumelis.id/assets/css/custom.css?v=2.0.0" />
+
+    <!-- Dark Css -->
+    <link rel="stylesheet" href="https://gumelis.id/assets/css/dark.css" />
+
+    <!-- Customizer Css -->
+    <link rel="stylesheet" href="https://gumelis.id/assets/css/customizer.css" />
+
+    <meta name="csrf-token" content="XMahznqs6AGVoHqvOLamtLYZHMiZ7cVWSLBGDMUm">
+
+    <!-- RTL Css -->
+    <link rel="stylesheet" href="https://gumelis.id/assets/css/rtl.css" />
+
+    <link rel="stylesheet" href="https://gumelis.id/assets/css/styles/app.css">
+            <style>
+        /* Menghilangkan icon default untuk Chrome/Safari */
+        .remove-default-icon::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        /* Menghilangkan icon default untuk Firefox */
+        .remove-default-icon {
+            -moz-appearance: none;
+        }
+
+        /* Menghilangkan icon default untuk Edge */
+        .remove-default-icon::-ms-clear,
+        .remove-default-icon::-ms-reveal {
+            display: none;
+        }
+
+        .iq-navbar-header{
+            margin-top: 50px;
+        }
+
+        @media(max-width:768px){
+            .iq-navbar-header{
+                height: 140px !important
+            }
+        }
+
+    </style>
+    </head>
+
+<body>
+    <span class="screen-darken"></span>
+
+    <!-- loader Start -->
+<div id="loading">
+    <div class="loader simple-loader">
+        <div class="loader-body"></div>
+    </div>
+</div>
+<!-- loader END -->            <nav class=" nav navbar navbar-expand-lg navbar-light iq-navbar fixed-top">
+    <div class="container-fluid navbar-inner">
+        <a href="#" class="navbar-brand">
+            
+        </a>
+        <div class="sidebar-toggle" style="background: #58920A !important" data-toggle="sidebar" data-active="true">
+            <i class="icon">
+                <svg width="20px" class="icon-20" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                          d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                </svg>
+            </i>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: -13px">
+            <span class="navbar-toggler-icon">
+                <span class="mt-2 navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-lg-0">
+                <!-- Account profile -->
+                <li class="nav-item dropdown d-none d-lg-block">
+                                                                    <a class="py-0 nav-link d-flex align-items-center" href="#" id="navbarDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="caption ms-3 d-none d-md-block ">
+                                <h6 class="mb-0 caption-title text-capitalize">Budi sudarso</h6>
+                                <p class="mb-0 caption-sub-title">Admin General</p>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://gumelis.id/dashboard/users/41/edit">Ubah Akun</a></li>
+                            
+                            <li><a class="dropdown-item" href="https://gumelis.id/auth/logout">Logout</a></li>
+                        </ul>
+                                    </li>
+                <li class="nav-item d-lg-none">
+                                            <a class="btn btn-outline-warning" href="https://gumelis.id/dashboard/users/41/edit">Ubah Akun</a>
+                                    </li>
+                <li class="nav-item d-lg-none">
+                                            <a class="btn btn-outline-success" href="https://gumelis.id/auth/logout">Logout</a>
+                                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+        <aside class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all h-100">
+    <div class="sidebar-header d-flex align-items-center justify-content-start">
+        <a href="https://gumelis.id" class="navbar-brand">
+            <!-- Logo untuk ukuran besar -->
+            <img class="logo-large" src="https://gumelis.id/assets/logo/logo-gumelis.png" alt="Logo Gumelis">
+            <!-- Logo untuk ukuran kecil -->
+            <img class="logo-small" src="https://gumelis.id/assets/logo/icon-gumelis.png" alt="Icon Gumelis">
+        </a>
+
+        <div class="sidebar-toggle" style="background:#58920A" data-toggle="sidebar" data-active="true">
+            <i class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </i>
+        </div>
+    </div>
+    <div class="pt-0 sidebar-body data-scrollbar">
+        <div class="sidebar-list">
+            <ul class="navbar-nav iq-main-menu mb-5" id="sidebar-menu">
+                                    
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #58920A
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Dashboard</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/broadcast">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #58920A
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Broadcast</span>
+            </a>
+</li>
+
+                    <li>
+                        <hr class="hr-horizontal">
+                    </li>
+                    <li class="nav-item  static-item ">
+    <a class="nav-link
+                    static-item disabled
+                "
+       aria-current="page"
+       href="#">
+        <i class="icon">
+                    </i>
+        <span class=" default-icon ">Kesehatan</span>
+                    <span class="mini-icon">-</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/maternals">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #58920A
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Ibu Hamil</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/children">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #58920A
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Bayi dan Balita</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                    active bg-success
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/health">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #ffffff
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Skrining Kesehatan</span>
+            </a>
+</li>
+
+                    <li>
+                        <hr class="hr-horizontal">
+                    </li>
+
+                    <li class="nav-item  static-item ">
+    <a class="nav-link
+                    static-item disabled
+                "
+       aria-current="page"
+       href="#">
+        <i class="icon">
+                    </i>
+        <span class=" default-icon ">Sosial</span>
+                    <span class="mini-icon">-</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/aid">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #58920A
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Penerima Bansos</span>
+            </a>
+</li>
+
+                    <li>
+                        <hr class="hr-horizontal">
+                    </li>
+
+                    <li class="nav-item  static-item ">
+    <a class="nav-link
+                    static-item disabled
+                "
+       aria-current="page"
+       href="#">
+        <i class="icon">
+                    </i>
+        <span class=" default-icon ">Pendidikan</span>
+                    <span class="mini-icon">-</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/students">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #58920A
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Siswa</span>
+            </a>
+</li>
+
+                    
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/attendance/1">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                          d="M16.191 2.76758H7.81C4.77 2.76758 3 4.54758 3 7.59758V17.9276C3 21.0276 4.77 22.7676 7.81 22.7676H16.191C19.28 22.7676 21 21.0276 21 17.9276V7.59758C21 4.54758 19.28 2.76758 16.191 2.76758"
+                          fill="                    #58920A
+                "/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.08002 7.41797V7.42797C7.64902 7.42797 7.30002 7.77797 7.30002 8.20797C7.30002 8.63797 7.64902 8.98797 8.08002 8.98797H11.069C11.5 8.98797 11.85 8.63797 11.85 8.19697C11.85 7.76797 11.5 7.41797 11.069 7.41797H8.08002ZM15.92 13.508H8.08002C7.64902 13.508 7.30002 13.158 7.30002 12.728C7.30002 12.298 7.64902 11.947 8.08002 11.947H15.92C16.35 11.947 16.7 12.298 16.7 12.728C16.7 13.158 16.35 13.508 15.92 13.508ZM15.92 18.078H8.08002C7.78002 18.118 7.49002 17.968 7.33002 17.718C7.17002 17.458 7.17002 17.128 7.33002 16.878C7.49002 16.618 7.78002 16.478 8.08002 16.508H15.92C16.319 16.548 16.62 16.888 16.62 17.298C16.62 17.697 16.319 18.038 15.92 18.078Z"
+                          fill="#58920A"/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Kehadiran</span>
+            </a>
+</li>
+
+                    <li>
+                        <hr class="hr-horizontal">
+                    </li>
+
+                    <li class="nav-item  static-item ">
+    <a class="nav-link
+                    static-item disabled
+                "
+       aria-current="page"
+       href="#">
+        <i class="icon">
+                    </i>
+        <span class=" default-icon ">Master Data</span>
+                    <span class="mini-icon">-</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/users">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.9964 9.1427H17.7618C15.7911 9.14617 14.1947 10.7027 14.1911 12.6241C14.1884 14.5499 15.7867 16.1134 17.7618 16.116H22V16.4219C22 19.7812 19.9636 21.7676 16.5173 21.7676H7.48356C4.03644 21.7676 2 19.7812 2 16.4219V9.10544C2 5.7462 4.03644 3.76758 7.48356 3.76758H16.5138C19.96 3.76758 21.9964 5.7462 21.9964 9.10544V9.1427ZM6.73956 9.1349H12.3796H12.3831H12.3902C12.8124 9.13317 13.1538 8.79777 13.152 8.38523C13.1502 7.97356 12.8053 7.64075 12.3831 7.64249H6.73956C6.32 7.64422 5.97956 7.97616 5.97778 8.3861C5.976 8.79777 6.31733 9.13317 6.73956 9.1349Z"
+                          fill="                    #58920A
+                "/>
+                    <path opacity="0.4"
+                          d="M16.0374 13.0646C16.2465 14.0158 17.0805 14.685 18.0326 14.6676H21.2825C21.6787 14.6676 22 14.3396 22 13.934V11.4025C21.9991 10.9978 21.6787 10.6688 21.2825 10.668H17.9561C16.8731 10.6714 15.9983 11.5704 16 12.6782C16 12.8079 16.0128 12.9376 16.0374 13.0646"
+                          fill="                    #58920A
+                "/>
+                    <circle cx="18" cy="12.668" r="1"
+                            fill="                    #58920A
+                "/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Pengguna</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/residents">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.9964 9.1427H17.7618C15.7911 9.14617 14.1947 10.7027 14.1911 12.6241C14.1884 14.5499 15.7867 16.1134 17.7618 16.116H22V16.4219C22 19.7812 19.9636 21.7676 16.5173 21.7676H7.48356C4.03644 21.7676 2 19.7812 2 16.4219V9.10544C2 5.7462 4.03644 3.76758 7.48356 3.76758H16.5138C19.96 3.76758 21.9964 5.7462 21.9964 9.10544V9.1427ZM6.73956 9.1349H12.3796H12.3831H12.3902C12.8124 9.13317 13.1538 8.79777 13.152 8.38523C13.1502 7.97356 12.8053 7.64075 12.3831 7.64249H6.73956C6.32 7.64422 5.97956 7.97616 5.97778 8.3861C5.976 8.79777 6.31733 9.13317 6.73956 9.1349Z"
+                          fill="                    #58920A
+                "/>
+                    <path opacity="0.4"
+                          d="M16.0374 13.0646C16.2465 14.0158 17.0805 14.685 18.0326 14.6676H21.2825C21.6787 14.6676 22 14.3396 22 13.934V11.4025C21.9991 10.9978 21.6787 10.6688 21.2825 10.668H17.9561C16.8731 10.6714 15.9983 11.5704 16 12.6782C16 12.8079 16.0128 12.9376 16.0374 13.0646"
+                          fill="                    #58920A
+                "/>
+                    <circle cx="18" cy="12.668" r="1"
+                            fill="                    #58920A
+                "/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Penduduk</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/category/socialAids">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.9964 9.1427H17.7618C15.7911 9.14617 14.1947 10.7027 14.1911 12.6241C14.1884 14.5499 15.7867 16.1134 17.7618 16.116H22V16.4219C22 19.7812 19.9636 21.7676 16.5173 21.7676H7.48356C4.03644 21.7676 2 19.7812 2 16.4219V9.10544C2 5.7462 4.03644 3.76758 7.48356 3.76758H16.5138C19.96 3.76758 21.9964 5.7462 21.9964 9.10544V9.1427ZM6.73956 9.1349H12.3796H12.3831H12.3902C12.8124 9.13317 13.1538 8.79777 13.152 8.38523C13.1502 7.97356 12.8053 7.64075 12.3831 7.64249H6.73956C6.32 7.64422 5.97956 7.97616 5.97778 8.3861C5.976 8.79777 6.31733 9.13317 6.73956 9.1349Z"
+                          fill="                    #58920A
+                "/>
+                    <path opacity="0.4"
+                          d="M16.0374 13.0646C16.2465 14.0158 17.0805 14.685 18.0326 14.6676H21.2825C21.6787 14.6676 22 14.3396 22 13.934V11.4025C21.9991 10.9978 21.6787 10.6688 21.2825 10.668H17.9561C16.8731 10.6714 15.9983 11.5704 16 12.6782C16 12.8079 16.0128 12.9376 16.0374 13.0646"
+                          fill="                    #58920A
+                "/>
+                    <circle cx="18" cy="12.668" r="1"
+                            fill="                    #58920A
+                "/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Kategori Bansos</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/posyandu">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.9964 9.1427H17.7618C15.7911 9.14617 14.1947 10.7027 14.1911 12.6241C14.1884 14.5499 15.7867 16.1134 17.7618 16.116H22V16.4219C22 19.7812 19.9636 21.7676 16.5173 21.7676H7.48356C4.03644 21.7676 2 19.7812 2 16.4219V9.10544C2 5.7462 4.03644 3.76758 7.48356 3.76758H16.5138C19.96 3.76758 21.9964 5.7462 21.9964 9.10544V9.1427ZM6.73956 9.1349H12.3796H12.3831H12.3902C12.8124 9.13317 13.1538 8.79777 13.152 8.38523C13.1502 7.97356 12.8053 7.64075 12.3831 7.64249H6.73956C6.32 7.64422 5.97956 7.97616 5.97778 8.3861C5.976 8.79777 6.31733 9.13317 6.73956 9.1349Z"
+                          fill="                    #58920A
+                "/>
+                    <path opacity="0.4"
+                          d="M16.0374 13.0646C16.2465 14.0158 17.0805 14.685 18.0326 14.6676H21.2825C21.6787 14.6676 22 14.3396 22 13.934V11.4025C21.9991 10.9978 21.6787 10.6688 21.2825 10.668H17.9561C16.8731 10.6714 15.9983 11.5704 16 12.6782C16 12.8079 16.0128 12.9376 16.0374 13.0646"
+                          fill="                    #58920A
+                "/>
+                    <circle cx="18" cy="12.668" r="1"
+                            fill="                    #58920A
+                "/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Posyandu</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/immunize">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.9964 9.1427H17.7618C15.7911 9.14617 14.1947 10.7027 14.1911 12.6241C14.1884 14.5499 15.7867 16.1134 17.7618 16.116H22V16.4219C22 19.7812 19.9636 21.7676 16.5173 21.7676H7.48356C4.03644 21.7676 2 19.7812 2 16.4219V9.10544C2 5.7462 4.03644 3.76758 7.48356 3.76758H16.5138C19.96 3.76758 21.9964 5.7462 21.9964 9.10544V9.1427ZM6.73956 9.1349H12.3796H12.3831H12.3902C12.8124 9.13317 13.1538 8.79777 13.152 8.38523C13.1502 7.97356 12.8053 7.64075 12.3831 7.64249H6.73956C6.32 7.64422 5.97956 7.97616 5.97778 8.3861C5.976 8.79777 6.31733 9.13317 6.73956 9.1349Z"
+                          fill="                    #58920A
+                "/>
+                    <path opacity="0.4"
+                          d="M16.0374 13.0646C16.2465 14.0158 17.0805 14.685 18.0326 14.6676H21.2825C21.6787 14.6676 22 14.3396 22 13.934V11.4025C21.9991 10.9978 21.6787 10.6688 21.2825 10.668H17.9561C16.8731 10.6714 15.9983 11.5704 16 12.6782C16 12.8079 16.0128 12.9376 16.0374 13.0646"
+                          fill="                    #58920A
+                "/>
+                    <circle cx="18" cy="12.668" r="1"
+                            fill="                    #58920A
+                "/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Imunisasi</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/village">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.9964 9.1427H17.7618C15.7911 9.14617 14.1947 10.7027 14.1911 12.6241C14.1884 14.5499 15.7867 16.1134 17.7618 16.116H22V16.4219C22 19.7812 19.9636 21.7676 16.5173 21.7676H7.48356C4.03644 21.7676 2 19.7812 2 16.4219V9.10544C2 5.7462 4.03644 3.76758 7.48356 3.76758H16.5138C19.96 3.76758 21.9964 5.7462 21.9964 9.10544V9.1427ZM6.73956 9.1349H12.3796H12.3831H12.3902C12.8124 9.13317 13.1538 8.79777 13.152 8.38523C13.1502 7.97356 12.8053 7.64075 12.3831 7.64249H6.73956C6.32 7.64422 5.97956 7.97616 5.97778 8.3861C5.976 8.79777 6.31733 9.13317 6.73956 9.1349Z"
+                          fill="                    #58920A
+                "/>
+                    <path opacity="0.4"
+                          d="M16.0374 13.0646C16.2465 14.0158 17.0805 14.685 18.0326 14.6676H21.2825C21.6787 14.6676 22 14.3396 22 13.934V11.4025C21.9991 10.9978 21.6787 10.6688 21.2825 10.668H17.9561C16.8731 10.6714 15.9983 11.5704 16 12.6782C16 12.8079 16.0128 12.9376 16.0374 13.0646"
+                          fill="                    #58920A
+                "/>
+                    <circle cx="18" cy="12.668" r="1"
+                            fill="                    #58920A
+                "/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Data Desa</span>
+            </a>
+</li>
+
+                    <li class="nav-item ">
+    <a class="nav-link
+                "
+       aria-current="page"
+       href="https://gumelis.id/dashboard/logs/users">
+        <i class="icon">
+                            <svg
+                    width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.9964 9.1427H17.7618C15.7911 9.14617 14.1947 10.7027 14.1911 12.6241C14.1884 14.5499 15.7867 16.1134 17.7618 16.116H22V16.4219C22 19.7812 19.9636 21.7676 16.5173 21.7676H7.48356C4.03644 21.7676 2 19.7812 2 16.4219V9.10544C2 5.7462 4.03644 3.76758 7.48356 3.76758H16.5138C19.96 3.76758 21.9964 5.7462 21.9964 9.10544V9.1427ZM6.73956 9.1349H12.3796H12.3831H12.3902C12.8124 9.13317 13.1538 8.79777 13.152 8.38523C13.1502 7.97356 12.8053 7.64075 12.3831 7.64249H6.73956C6.32 7.64422 5.97956 7.97616 5.97778 8.3861C5.976 8.79777 6.31733 9.13317 6.73956 9.1349Z"
+                          fill="                    #58920A
+                "/>
+                    <path opacity="0.4"
+                          d="M16.0374 13.0646C16.2465 14.0158 17.0805 14.685 18.0326 14.6676H21.2825C21.6787 14.6676 22 14.3396 22 13.934V11.4025C21.9991 10.9978 21.6787 10.6688 21.2825 10.668H17.9561C16.8731 10.6714 15.9983 11.5704 16 12.6782C16 12.8079 16.0128 12.9376 16.0374 13.0646"
+                          fill="                    #58920A
+                "/>
+                    <circle cx="18" cy="12.668" r="1"
+                            fill="                    #58920A
+                "/>
+                </svg>
+                    </i>
+        <span class=" item-name ">Aktivitas Pengguna</span>
+            </a>
+</li>
+
+                                        
+                                <div style="margin-bottom: 75px !important"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-footer"></div>
+</aside>
+        <main class="main-content">
+                            <div class="position-relative iq-banner">
+    <div class="iq-navbar-header my-5" style="">
+        <div class="container-fluid iq-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="flex-wrap d-flex justify-content-between align-items-center">
+                        <div>
+                            <h1 class="text-capitalize">Skrining Kesehatan</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="iq-header-img relative z-0" style="height: 120px !important; background:#58920A;">
+            <img src="https://gumelis.id/assets/images/dashboard/top-image.png" alt="header"
+                class="theme-color-default-img img-fluid w-100 h-100 animated-scaleX">
+        </div>
+    </div>
+</div>
+                        <div class="py-0 container-fluid content-inner" style="">
+                <div class="card py-3 px-3">
+        <form action="https://gumelis.id/dashboard/health" method="GET">
+            <div class="row gap-3 gap-md-0 justify-content-md-between">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text" id="search-input">
+                            <svg class="icon-18" width="18" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+                                <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <input type="search" class="form-control" name="search" placeholder="Cari Nama atau NIK..." value="">
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <button type="submit" class="btn btn-outline-success text-uppercase w-100">
+                        <svg
+                            class="icon-18 mb-1 text-secondary" width="18" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></circle>
+                            <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        Cari Penduduk
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row gap-3 gap-xl-0">
+        <div class="col-12 order-xl-first order-last">
+            <div class="bd-example shadow-lg">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item border border-0">
+                        <h4 class="accordion-header" id="headingOne">
+                            <button class="accordion-button text-black bg-white fs-4 py-4" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                DATA PENDUDUK
+                            </button>
+                        </h4>
+                        <div id="collapseOne" class="accordion-collapse collapse show bg-white"
+                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-0">
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table id="basic-table" class="table mb-0" role="grid">
+                                            <thead>
+                                                <tr>
+                                                    <th>AKSI</th>
+                                                    <th>NAMA</th>
+                                                    <th>TANGGAL LAHIR</th>
+                                                    <th>NO HP</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/159/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Abdul Rohman
+                                                        </td>
+                                                        <td>
+                                                            01 Nov 2024
+                                                        </td>
+                                                        <td>+6288299377821</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/1/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            alkademi
+                                                        </td>
+                                                        <td>
+                                                            01 Jan 1990
+                                                        </td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/165/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Angga Satria Atmaja
+                                                        </td>
+                                                        <td>
+                                                            13 Okt 1988
+                                                        </td>
+                                                        <td>+6281293164747</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/157/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Asep nurachman
+                                                        </td>
+                                                        <td>
+                                                            14 Jul 2003
+                                                        </td>
+                                                        <td>+6281916382050</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/164/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Asih
+                                                        </td>
+                                                        <td>
+                                                            14 Nov 2024
+                                                        </td>
+                                                        <td>+6281916382050</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/151/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Budi sudarso
+                                                        </td>
+                                                        <td>
+                                                            22 Agt 1998
+                                                        </td>
+                                                        <td>+62895601834700</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/160/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Dasih
+                                                        </td>
+                                                        <td>
+                                                            14 Nov 2024
+                                                        </td>
+                                                        <td>+6285894095098</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/163/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Dasitoh
+                                                        </td>
+                                                        <td>
+                                                            14 Feb 2018
+                                                        </td>
+                                                        <td>+6285881517840</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/158/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Dina Marlina
+                                                        </td>
+                                                        <td>
+                                                            14 Nov 2024
+                                                        </td>
+                                                        <td>+6285817398993</td>
+                                                    </tr>
+                                                                                                    <tr>
+                                                        <td class="col-2">
+                                                            <a href="https://gumelis.id/dashboard/health/161/records"
+                                                               class="btn btn-outline-success text-uppercase">PRATINJAU</a>
+                                                        </td>
+                                                        <td class="text-wrap">
+                                                            Kurnia
+                                                        </td>
+                                                        <td>
+                                                            14 Nov 2024
+                                                        </td>
+                                                        <td>+6285776972377</td>
+                                                    </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                                                            <div class="px-3 py-3">
+                                    <nav aria-label="Page navigation" class="my-4">
+        <ul class="pagination pagination-lg flex-wrap">
+            
+            <li class="page-item disabled">
+                <a class="page-link fs-6" href="" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            
+            
+            
+            
+            
+                            <li class="page-item active">
+                    <a class="page-link fs-6" href="https://gumelis.id/dashboard/health?page=1">1</a>
+                </li>
+                            <li class="page-item ">
+                    <a class="page-link fs-6" href="https://gumelis.id/dashboard/health?page=2">2</a>
+                </li>
+            
+            
+            
+            
+            <li class="page-item ">
+                <a class="page-link fs-6" href="https://gumelis.id/dashboard/health?page=2" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+            <footer class="footer">
+    <div class="footer-body">
+        <ul class="p-0 mb-0 left-panel list-inline">
+        </ul>
+        <div class="right-panel">
+            ©<script>document.write(new Date().getFullYear())</script> GUMELIS, powered by AWS
+        </div>
+    </div>
+</footer>
+        </main>
+    
+    <!-- Form Wizard Script -->
+    <script src="https://gumelis.id/assets/js/plugins/form-wizard.js"></script>
+
+    <!-- Library Bundle Script -->
+    <script src="https://gumelis.id/assets/js/core/libs.min.js"></script>
+
+    <!-- External Library Bundle Script -->
+    <script src="https://gumelis.id/assets/js/core/external.min.js"></script>
+
+    <!-- Widgetchart Script -->
+    <script src="https://gumelis.id/assets/js/charts/widgetcharts.js"></script>
+
+    <!-- mapchart Script -->
+    <script src="https://gumelis.id/assets/js/charts/vectore-chart.js"></script>
+    <script src="https://gumelis.id/assets/js/charts/dashboard.js"></script>
+
+    <!-- fslightbox Script -->
+    <script src="https://gumelis.id/assets/js/plugins/fslightbox.js"></script>
+
+    <!-- Settings Script -->
+    <script src="https://gumelis.id/assets/js/plugins/setting.js"></script>
+
+    <!-- App Script -->
+    <script src="https://gumelis.id/assets/js/hope-ui.js" defer></script>
+
+    <!-- Form Wizard Script -->
+    <script src="https://gumelis.id/assets/js/plugins/form-wizard.js"></script>
+
+    <!-- Slider-tab Script -->
+    <script src="https://gumelis.id/assets/js/plugins/slider-tabs.js"></script>
+            <!-- AOS Animation Plugin-->
+        <script src="https://gumelis.id/assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Flatpickr Script -->
+        <script src="https://gumelis.id/assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+        <script src="https://gumelis.id/assets/js/plugins/flatpickr.js" defer></script>
+
+        <script src="https://gumelis.id/assets/js/plugins/prism.mini.js"></script>
+    
+    
+</body>
+
+</html>
